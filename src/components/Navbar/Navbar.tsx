@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { styles } from "./Navbar.module.css";
+
+export interface NavbarPropsInterface
+extends React.HTMLAtributes<HTMLDivElement>{}
   
 const Navbar = () => {
   return (
