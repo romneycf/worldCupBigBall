@@ -1,4 +1,19 @@
+.container{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #a68e34; 
+}
+
 nav{
+    
+}
+
+ul{
     display: flex;
     flex-direction: row;
+    gap: 50px;
 }

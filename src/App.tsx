@@ -1,10 +1,13 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
-import About from "./pages/About";
+import Layout from "./containers/Layout";
+import Home from "./containers/Home/Home";
+import NoPage from "./containers/NoPage/NoPage";
+import Login from "./containers/Login/Login";
+import Apostas from "./containers/Apostas/Apostas";
+import Jogos from "./containers/Jogos/Jogos";
+import Grupos from "./containers/Grupos/Grupos";
+import Contato from "./containers/Contato/Contato";
 
 function App() {
   return (
@@ -13,8 +16,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+          <Route path="apostas" element={<Apostas />} />
+          <Route path="jogos" element={<Jogos />} />
+          <Route path="grupos" element={<Grupos />} />
+          <Route path="contato" element={<Contato />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
