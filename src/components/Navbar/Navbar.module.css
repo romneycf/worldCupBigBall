@@ -1,19 +1,23 @@
-.container{
-    position: fixed;
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    padding: 10px;
+.container nav{
     border: 1px solid black;
+    height: 50px;
+    width: 100%;
+    position: relative;  
+    display: flex;
+    justify-content: center;
     background-color: #a68e34; 
 }
 
-nav{
-    
-}
-
-ul{
+.container ul{
+    list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 50px;
+}
+
+.container li > a {
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
 }

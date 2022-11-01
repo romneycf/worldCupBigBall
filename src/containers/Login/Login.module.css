@@ -1,0 +1,197 @@
+.root {
+  font-family: "Roboto", sans-serif !important;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #91092f 25%, #790909 55%, #28000d);
+  overflow: hidden;
+}
+
+.wrapper {
+  border: 1px solid gold;
+  min-width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+  height: 480px;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.toggleForms {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  z-index: 4;
+}
+
+.root .toggleForms > Button {
+  cursor: pointer;
+  background: #570909;
+  width: 100%;
+  border: none;
+  color: #fff;
+}
+
+.root .toggleForms > Button.active {
+  background: transparent;
+  border: none;
+}
+
+.formWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid cyan;
+}
+
+.worldCupLogoContainer {
+  display: flex;
+
+  justify-content: center;
+  padding: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  border: 1px solid white;
+}
+
+.btContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.root form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 0px 15px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s linear;
+  z-index: 2;
+}
+
+.animateWrapper {
+  overflow: hidden;
+}
+
+.animate {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.animate > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 50px;
+  top: 100%;
+  left: 10px;
+  animation: move 10s linear infinite;
+}
+
+.animate > li:nth-last-of-type(2) {
+  font-size: 40px;
+  left: 80px;
+  animation-delay: 3.5s;
+}
+
+.animate > li:nth-last-of-type(3) {
+  font-size: 80px;
+  left: 150px;
+  animation-delay: 2s;
+}
+
+.animate > li:nth-last-of-type(4) {
+  font-size: 90px;
+  left: 250px;
+  animation-delay: 5s;
+}
+
+.animate > li:nth-last-of-type(5) {
+  font-size: 70px;
+  left: 390px;
+  animation-delay: 6s;
+}
+
+.animate > li:nth-last-of-type(6) {
+  font-size: 60px;
+  left: 600px;
+  animation-delay: 1s;
+}
+
+.animate > li:nth-last-of-type(7) {
+  font-size: 100px;
+  left: 750px;
+  animation-delay: 2.4s;
+}
+
+.animate > li:nth-last-of-type(8) {
+  font-size: 90px;
+  left: 900px;
+  animation-delay: 5s;
+}
+
+.animate > li:nth-last-of-type(9) {
+  font-size: 30px;
+  left: 1020px;
+  animation-delay: 3s;
+}
+
+.animate > li:nth-last-of-type(10) {
+  font-size: 50px;
+  left: 1100px;
+  animation-delay: 1.9s;
+}
+
+.animate > li:nth-last-of-type(11) {
+  font-size: 80px;
+  left: 1200px;
+  animation-delay: 4.6s;
+}
+
+.animate > li:nth-last-of-type(12) {
+  font-size: 60px;
+  left: 1300px;
+  animation-delay: 3.8s;
+}
+
+@keyframes move {
+  from {
+    top: 100%;
+    display: block;
+    overflow: hidden;
+  }
+  to {
+    top: 0px;
+    transform: rotate(360deg);
+    display: block;
+  }
+}
