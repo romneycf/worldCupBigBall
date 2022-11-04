@@ -62,10 +62,10 @@ export default function Login() {
       </div>
       <section className={styles.wrapper}>
         <div className={styles.toggleForms}>
-          <Button onClick={() => handleLeftPosition()} id="login">
+          <Button className={styles.formButton} onClick={() => handleLeftPosition()} id="login">
             Login
           </Button>
-          <Button onClick={() => handleLeftPosition()} id="register">
+          <Button className={styles.formButton} onClick={() => handleLeftPosition()} id="register">
             Register
           </Button>
         </div>

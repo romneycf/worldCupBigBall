@@ -1,13 +1,24 @@
 .container{
-    padding-top: 100px;
     width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    padding-top: 50px;
     font-family: "Roboto",sans-serif;
     background: linear-gradient(90deg,#91092f 25%,#790909 55%,#28000d);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .worldCupLogoContainer{
     text-align: center !important;
+}
+.title{
+    font-size: 50px;
+    color: white;
+}
+
+.groupsWrapper{
+}
+.groupDiv{
+    border: 1px solid grey;
 }
