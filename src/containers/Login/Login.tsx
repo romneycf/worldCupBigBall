@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import { useAuth } from "../../contexts/auth-context";
 import styles from "./Login.module.css";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import Soccer from "../../components/SoccerIcon/Soccer";
 
 export default function Login() {
+  const [form, setForm] = useState({
+    login: "",
+    password: "",
+  });
+  const { login } = useAuth();
+
+  const handleLogin = () => {
+    login(form.login, form.password);
+    console.log(form.login, form.password);
+  };
+
   const [loginLeftPosition, setLoginLeftPosition] = useState("0%");
   const [registerLeftPosition, setRegisterLeftPosition] = useState("100%");
 
@@ -62,10 +74,18 @@ export default function Login() {
       </div>
       <section className={styles.wrapper}>
         <div className={styles.toggleForms}>
-          <Button className={styles.formButton} onClick={() => handleLeftPosition()} id="login">
+          <Button
+            className={styles.formButton}
+            onClick={() => handleLeftPosition()}
+            id="login"
+          >
             Login
           </Button>
-          <Button className={styles.formButton} onClick={() => handleLeftPosition()} id="register">
+          <Button
+            className={styles.formButton}
+            onClick={() => handleLeftPosition()}
+            id="register"
+          >
             Register
           </Button>
         </div>
@@ -77,15 +97,31 @@ export default function Login() {
             <div className={styles.inputContainer}>
               <div className={styles.inputWrapper}>
                 <div>
-                  <Input id="email" type="email" placeholder="Email" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) =>
+                      setForm((prev) => ({ ...prev, login: e.target.value }))
+                    }
+                  />
                 </div>
                 <div>
-                  <Input id="password" type="password" placeholder="Password" />
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) =>
+                      setForm((prev) => ({ ...prev, password: e.target.value }))
+                    }
+                  />
                 </div>
                 <p>Forgot Password?</p>
               </div>
               <div className={styles.btContainer}>
-                <Button className="">Login</Button>
+                <Button className="" onClick={handleLogin}>
+                  Login
+                </Button>
               </div>
             </div>
           </div>
