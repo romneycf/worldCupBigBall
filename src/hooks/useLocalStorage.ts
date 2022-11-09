@@ -3,14 +3,16 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { LOCAL_STORAGE } from "../constants";
 import { LocalStorageNamespaces } from "../types/local-storage";
 
-export default function useLocalStorage<Return>(key: LocalStorageNamespaces): [Return, Dispatch<SetStateAction<Return>>] {
+export default function useLocalStorage<Return>(
+  key: LocalStorageNamespaces
+): [Return, Dispatch<SetStateAction<Return>>] {
   const [localStorageState, setLocalStorageState] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem(key) ?? "");
     } catch {
       return undefined;
     }
-  });
+});
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(localStorageState));
