@@ -11,7 +11,6 @@ import AuthContextProvider from "./contexts/auth-context";
 
 function App() {
   return (
-    <div className="App">
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -23,7 +22,6 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </AuthContextProvider>
-    </div>
   );
 }
 

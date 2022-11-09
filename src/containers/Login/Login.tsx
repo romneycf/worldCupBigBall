@@ -12,9 +12,9 @@ export default function Login() {
   });
   const { login } = useAuth();
 
-  const handleLogin = () => {
+  const handleLogin = (e: any) => {
+    e.preventDefault();
     login(form.login, form.password);
-    console.log(form.login, form.password);
   };
 
   const [loginLeftPosition, setLoginLeftPosition] = useState("0%");
